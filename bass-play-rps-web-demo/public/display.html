@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASS Plays — Central Display</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/display.js"></script>
+</head>
+<body>
+  <main class="display-shell">
+    <header class="display-header">
+      <div>
+        <div class="kicker">A distributed public game</div>
+        <div class="display-title">BASS PLAYS</div>
+        <div class="subhead">Rock · Paper · Scissors</div>
+      </div>
+      <div class="session-label">
+        <div id="session-id">SESSION —</div>
+        <div id="session-start">WAITING FOR SERVER</div>
+      </div>
+    </header>
+
+    <section class="display-grid">
+      <article class="panel match-panel">
+        <h2>Latest match</h2>
+        <div id="latest-match" class="empty-match">WAITING FOR THE FIRST MATCH…</div>
+      </article>
+
+      <article class="panel">
+        <h2>Participation</h2>
+        <div class="stats-grid">
+          <div class="stat"><strong id="total-participants">0</strong><span>Total participants</span></div>
+          <div class="stat"><strong id="total-matches">0</strong><span>Total matches</span></div>
+          <div class="stat"><strong id="northern-participants">0</strong><span>Northern participants</span></div>
+          <div class="stat"><strong id="eastern-participants">0</strong><span>Eastern participants</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Location results</h2>
+        <div class="stats-grid">
+          <div class="stat"><strong id="northern-wins">0</strong><span>Northern wins</span></div>
+          <div class="stat"><strong id="eastern-wins">0</strong><span>Eastern wins</span></div>
+          <div class="stat"><strong id="draws">0</strong><span>Draws</span></div>
+          <div class="stat"><strong id="unmatched">0</strong><span>Unmatched choices</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Choice distribution — Northern</h2>
+        <div id="northern-bars" class="choice-bars"></div>
+        <h2 style="margin-top:24px">Choice distribution — Eastern</h2>
+        <div id="eastern-bars" class="choice-bars"></div>
+      </article>
+
+      <article class="panel" style="grid-column:1/-1">
+        <h2>Recent matches</h2>
+        <div id="match-history" class="history"><div class="notice">No matches yet.</div></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

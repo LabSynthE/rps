@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASS Plays — NORTHERN ENTRANCE</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/player.js"></script>
+</head>
+<body data-location="northern">
+  <main class="player-shell">
+    <div class="kicker">A distributed public game</div>
+    <div class="brand">BASS PLAYS</div>
+    <div class="subhead">Rock · Paper · Scissors</div>
+    <div class="location-title">NORTHERN ENTRANCE</div>
+    <p class="prompt">MAKE YOUR CHOICE</p>
+    <section class="button-grid" aria-label="Choose rock paper or scissors">
+      <button class="choice-button" data-choice="rock"><span class="choice-symbol">✊</span>ROCK</button>
+      <button class="choice-button" data-choice="paper"><span class="choice-symbol">✋</span>PAPER</button>
+      <button class="choice-button" data-choice="scissors"><span class="choice-symbol">✌</span>SCISSORS</button>
+    </section>
+    <div class="feedback" id="feedback">
+      <strong>MAKE YOUR CHOICE</strong>
+      <span>ONE PRESS RECORDS ONE PARTICIPATION</span>
+    </div>
+    <div class="player-footer">BASS PLAYS: ROCK, PAPER, SCISSORS</div>
+  </main>
+</body>
+</html>

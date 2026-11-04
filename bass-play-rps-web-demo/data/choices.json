@@ -1,0 +1,83 @@
+[
+  {
+    "choiceId": "E_512d90e6-5378-47fb-a84a-b3511aee87b5",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "eastern",
+    "choice": "rock",
+    "timestamp": "2026-11-04T23:22:40.859Z",
+    "matched": true,
+    "matchId": "match_897d4dfe-d791-4f8f-8490-e624225d1068"
+  },
+  {
+    "choiceId": "N_15e785e6-241b-4aa6-a5b9-542320678899",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "paper",
+    "timestamp": "2026-11-04T23:22:46.666Z",
+    "matched": true,
+    "matchId": "match_897d4dfe-d791-4f8f-8490-e624225d1068"
+  },
+  {
+    "choiceId": "N_30c26083-fbbf-4cc9-bb7c-8e2f450381b4",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "rock",
+    "timestamp": "2026-11-04T23:24:55.441Z",
+    "matched": true,
+    "matchId": "match_6f982c42-e0c2-4ed1-8524-6d5cfc2a865c"
+  },
+  {
+    "choiceId": "N_85296ccf-3553-4f66-b335-777669eef912",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "paper",
+    "timestamp": "2026-11-04T23:25:00.285Z",
+    "matched": true,
+    "matchId": "match_9cde09e4-7ac4-43e6-8e80-2b421ee9dc36"
+  },
+  {
+    "choiceId": "N_b82988c1-1a7f-42eb-b104-e46715f0e1a1",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "scissors",
+    "timestamp": "2026-11-04T23:25:10.918Z",
+    "matched": false,
+    "matchId": null
+  },
+  {
+    "choiceId": "N_dfc29d4b-4695-42a7-8726-f5607cc9328e",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "paper",
+    "timestamp": "2026-11-04T23:25:15.251Z",
+    "matched": false,
+    "matchId": null
+  },
+  {
+    "choiceId": "N_26c53076-c3c1-4855-a25e-5313d5648537",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "northern",
+    "choice": "paper",
+    "timestamp": "2026-11-04T23:26:07.136Z",
+    "matched": false,
+    "matchId": null
+  },
+  {
+    "choiceId": "E_90d98bf9-34d1-4983-b84e-1c9c91e0432f",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "eastern",
+    "choice": "scissors",
+    "timestamp": "2026-11-04T23:26:36.349Z",
+    "matched": true,
+    "matchId": "match_6f982c42-e0c2-4ed1-8524-6d5cfc2a865c"
+  },
+  {
+    "choiceId": "E_82fc0699-27ee-495b-b5ba-a73eaf34dc35",
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "location": "eastern",
+    "choice": "paper",
+    "timestamp": "2026-11-04T23:26:49.971Z",
+    "matched": true,
+    "matchId": "match_9cde09e4-7ac4-43e6-8e80-2b421ee9dc36"
+  }
+]

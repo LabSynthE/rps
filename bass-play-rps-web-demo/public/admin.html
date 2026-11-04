@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASS Plays — Admin</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/admin.js"></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <div class="kicker">Local installation control</div>
+        <div class="display-title">ADMIN DASHBOARD</div>
+        <div class="subhead">BASS Plays: Rock, Paper, Scissors</div>
+      </div>
+      <div class="session-label" id="session-info">Loading session…</div>
+    </header>
+
+    <div class="admin-actions">
+      <button class="action-button primary" id="new-session">START NEW SESSION</button>
+      <a class="action-button" href="/api/export/choices.csv">EXPORT CHOICES CSV</a>
+      <a class="action-button" href="/api/export/matches.csv">EXPORT MATCHES CSV</a>
+      <button class="action-button danger" id="clear-all">CLEAR ALL HISTORY</button>
+    </div>
+    <p class="notice">
+      Starting a new session ends the current session and resets its queues and live statistics.
+      Historical sessions, choices, and matches remain in the local data files.
+      Clear All History permanently deletes those records.
+    </p>
+
+    <section class="display-grid">
+      <article class="panel">
+        <h2>Current session statistics</h2>
+        <div class="stats-grid">
+          <div class="stat"><strong id="participants">0</strong><span>Participants</span></div>
+          <div class="stat"><strong id="matches">0</strong><span>Matches</span></div>
+          <div class="stat"><strong id="n-wins">0</strong><span>Northern wins</span></div>
+          <div class="stat"><strong id="e-wins">0</strong><span>Eastern wins</span></div>
+          <div class="stat"><strong id="draws">0</strong><span>Draws</span></div>
+          <div class="stat"><strong id="queued">0</strong><span>Unmatched choices</span></div>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>Waiting queues</h2>
+        <div class="queue-row"><span>Northern queue</span><strong id="n-queue">0</strong></div>
+        <div class="queue-row"><span>Eastern queue</span><strong id="e-queue">0</strong></div>
+        <div class="queue-row"><span>Server status</span><strong class="status">CONNECTED</strong></div>
+      </article>
+    </section>
+
+    <article class="panel" style="margin-top:18px">
+      <h2>Current session — recent matches</h2>
+      <div id="history" class="history"><div class="notice">No matches yet.</div></div>
+    </article>
+  </main>
+</body>
+</html>

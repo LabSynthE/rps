@@ -1,0 +1,41 @@
+[
+  {
+    "sessionId": "session_97f8ef9c-1124-4183-83f9-8a17e1b89a2a",
+    "startTime": "2026-11-04T17:42:53.895Z",
+    "endTime": "2026-11-04T17:55:57.804Z",
+    "status": "ended",
+    "startReason": "server_start",
+    "endReason": "server_restart"
+  },
+  {
+    "sessionId": "session_75482839-77f3-4a2d-a31d-a7db8fbb0738",
+    "startTime": "2026-11-04T17:55:57.805Z",
+    "endTime": "2026-11-04T17:59:10.635Z",
+    "status": "ended",
+    "startReason": "server_start",
+    "endReason": "server_restart"
+  },
+  {
+    "sessionId": "session_41067231-69b8-4296-86e5-7592e91f7d22",
+    "startTime": "2026-11-04T17:59:10.636Z",
+    "endTime": "2026-11-04T18:03:16.694Z",
+    "status": "ended",
+    "startReason": "server_start",
+    "endReason": "server_restart"
+  },
+  {
+    "sessionId": "session_2b9f4a2c-1458-4607-88b2-0ef4606ad821",
+    "startTime": "2026-11-04T18:03:16.694Z",
+    "endTime": "2026-11-04T23:21:52.320Z",
+    "status": "ended",
+    "startReason": "server_start",
+    "endReason": "server_restart"
+  },
+  {
+    "sessionId": "session_602a2474-2247-4c67-8253-3e36919c80b1",
+    "startTime": "2026-11-04T23:21:52.321Z",
+    "endTime": null,
+    "status": "active",
+    "startReason": "server_start"
+  }
+]
