@@ -12,7 +12,6 @@
   --lightgreen: rgb(95, 244, 183);
   --silver: rgb(170, 169, 173);
   }
-}
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; }
 body { min-height: 100vh; }
