@@ -25,7 +25,9 @@ a { color: var(--accent); }
   font-weight: 700; 
 }
 .kicker { color: var(--accent); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
-.brand { font-size: clamp(28px, 4vw, 56px); font-weight: 900; letter-spacing: -.05em; line-height: .95; }
+.brand { 
+  /* font-size: clamp(28px, 4vw, 56px);  */
+  font-weight: 900; letter-spacing: -.05em; line-height: .95; }
 .subhead { color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
 .player-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5vh 5vw; text-align: center; gap: 24px; }
 .player-shell .brand { margin-top: 8px; }
