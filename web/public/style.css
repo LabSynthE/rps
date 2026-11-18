@@ -7,6 +7,11 @@
   --accent: #d9ff45;
   --red: #ff6b6b;
   --line: #3b3b3b;
+  --UTDgreen: rgb(18, 71, 52); /* Define custom colors*/
+  --UTDorange: rgb(232, 117, 0); 
+  --lightgreen: rgb(95, 244, 183);
+  --silver: rgb(170, 169, 173);
+  }
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; }
@@ -14,7 +19,7 @@ body { min-height: 100vh; }
 button { font: inherit; cursor: pointer; }
 a { color: var(--accent); }
 .kicker { 
-  color: var(--accent); 
+  color: var(--lightgreen); 
   font-size: 13px; 
   letter-spacing: .18em; 
   text-transform: uppercase; 
@@ -25,14 +30,14 @@ a { color: var(--accent); }
 .player-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5vh 5vw; text-align: center; gap: 24px; }
 .player-shell .brand { margin-top: 8px; }
 .location-title { font-size: clamp(18px, 2vw, 28px); letter-spacing: .16em; font-weight: 700; }
-.prompt { color: var(--muted); font-size: clamp(15px, 1.5vw, 20px); letter-spacing: .12em; margin: 12px 0 6px; }
+.prompt { color: #000; font-size: clamp(15px, 1.5vw, 20px); letter-spacing: .12em; margin: 12px 0 6px; }
 .button-grid { display: grid; grid-template-columns: repeat(3, minmax(130px, 220px)); gap: 16px; width: min(900px, 100%); margin-top: 12px; }
 .choice-button { min-height: 190px; border: 2px solid var(--text); background: var(--panel); color: var(--text); font-size: clamp(20px, 2.6vw, 32px); font-weight: 900; letter-spacing: .05em; transition: .15s ease; }
 .choice-button:hover, .choice-button:focus-visible { background: var(--accent); color: #101010; border-color: var(--accent); transform: translateY(-3px); outline: none; }
 .choice-button:disabled { opacity: .45; cursor: wait; transform: none; }
 .choice-symbol { display: block; font-size: 48px; margin-bottom: 14px; }
 .feedback { min-height: 76px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
-.feedback strong { font-size: clamp(20px, 2.8vw, 34px); color: var(--accent); }
+.feedback strong { font-size: clamp(20px, 2.8vw, 34px); color: var(--lightgreen); }
 .feedback span { color: var(--muted); letter-spacing: .08em; }
 .player-footer { color: #777; font-size: 11px; letter-spacing: .12em; margin-top: 12px; }
 .display-shell, .admin-shell { padding: 34px; max-width: 1600px; margin: 0 auto; }
