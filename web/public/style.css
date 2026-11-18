@@ -5,6 +5,7 @@
   --text: #f5f3ed;
   --muted: #aaa79f;
   --accent: #d9ff45;
+  --bassplays: #b6cf52;
   --red: #ff6b6b;
   --line: #3b3b3b;
   --UTDgreen: rgb(18, 71, 52); /* Define custom colors*/
@@ -17,18 +18,19 @@ html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--te
 body { min-height: 100vh; }
 button { font: inherit; cursor: pointer; }
 a { color: var(--accent); }
+
 .kicker { 
-  color: var(--lightgreen); 
-  font-size: 13px; 
-  letter-spacing: .18em; 
-  text-transform: uppercase; 
-  font-weight: 700; 
-}
-.kicker { color: var(--accent); font-size: .8rem; letter-spacing: .18rem; text-transform: uppercase; font-weight: 700; padding: 1rem 0 0 0; }
+color: #000; 
+font-size: .8rem; 
+letter-spacing: .18rem; 
+text-transform: uppercase; 
+font-weight: 700; 
+padding: 1rem 0 0 0; }
+
 .brand { 
   /* font-size: clamp(28px, 4vw, 56px);  */
   font-weight: 900; letter-spacing: -.05em; line-height: .95; }
-.subhead { color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
+.subhead { color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
 .player-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5vh 5vw; text-align: center; gap: 24px; }
 .player-shell .brand { margin-top: 8px; }
 .location-title { font-size: clamp(18px, 2vw, 28px); letter-spacing: .16em; font-weight: 700; }
@@ -39,7 +41,11 @@ a { color: var(--accent); }
 .choice-button:disabled { opacity: .45; cursor: wait; transform: none; }
 .choice-symbol { display: block; font-size: 48px; margin-bottom: 14px; }
 .feedback { min-height: 76px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
-.feedback strong { font-size: clamp(20px, 2.8vw, 34px); color: var(--lightgreen); }
+.feedback strong { 
+  font-size: clamp(20px, 2.8vw, 34px); 
+  color: var(--UTDgreen); 
+}
+
 .feedback span { color: var(--muted); letter-spacing: .08em; }
 .player-footer { color: #777; font-size: 11px; letter-spacing: .12em; margin-top: 12px; }
 .display-shell, .admin-shell { padding: 34px; max-width: 1600px; margin: 0 auto; }
@@ -78,6 +84,22 @@ a { color: var(--accent); }
 .admin-table td, .admin-table th { border-bottom: 1px solid var(--line); padding: 11px 8px; text-align: left; }
 .admin-table th { color: var(--muted); text-transform: uppercase; font-size: 11px; letter-spacing: .1em; }
 .status { color: var(--accent); }
+
+.bass-glitch {
+  font-family: "Courier New", Courier, ui-monospace, monospace;
+  animation: bass-fade 3.5s ease-in-out infinite,
+             bass-distort 2.5s steps(1) infinite;
+}
+@keyframes bass-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes bass-distort {
+  0%, 88%, 100% { text-shadow: none; transform: none; }
+  90% { text-shadow: 2px 0 rgba(255,0,60,.7), -2px 0 rgba(0,255,255,.7); transform: translateX(-2px); }
+  92% { text-shadow: -3px 0 rgba(255,0,60,.7), 3px 0 rgba(0,255,255,.7); transform: translateX(3px); }
+  94% { text-shadow: 1px 0 rgba(255,0,60,.5), -1px 0 rgba(0,255,255,.5); transform: none; }
+}
 @media (max-width: 760px) {
   .button-grid { grid-template-columns: 1fr; max-width: 440px; }
   .choice-button { min-height: 110px; }
