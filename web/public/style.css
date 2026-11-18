@@ -13,13 +13,7 @@ html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--te
 body { min-height: 100vh; }
 button { font: inherit; cursor: pointer; }
 a { color: var(--accent); }
-.kicker { 
-  color: var(--accent); 
-  font-size: 13px; 
-  letter-spacing: .18em; 
-  text-transform: uppercase; 
-  font-weight: 700; 
-}
+.kicker { color: var(--accent); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
 .brand { font-size: clamp(28px, 4vw, 56px); font-weight: 900; letter-spacing: -.05em; line-height: .95; }
 .subhead { color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
 .player-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5vh 5vw; text-align: center; gap: 24px; }
@@ -80,3 +74,27 @@ a { color: var(--accent); }
   .display-header, .admin-header { align-items: flex-start; flex-direction: column; }
   .session-label { text-align: left; }
 }
+
+
+/* Hidden web backup controls: normally the physical ESP32 buttons are used.
+   Tap the transparent bottom-right hotspot to reveal the three browser controls. */
+.backup-controls[hidden] { display: none !important; }
+.backup-controls { margin-inline: auto; }
+.backup-hotspot { position: fixed; right: 0; bottom: 0; width: 58px; height: 58px; z-index: 1000; border: 0; background: transparent; opacity: 0; cursor: default; }
+.backup-hotspot:focus-visible { opacity: .18; outline: 2px dashed currentColor; }
+
+
+/* Admin Arduino device monitor */
+.device-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.device-card { background: var(--panel-2); border: 1px solid var(--line); padding: 16px; min-width: 0; }
+.device-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; letter-spacing: .08em; }
+.device-badge { display: inline-block; padding: 6px 9px; border: 1px solid var(--line); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.device-badge.recent { color: #8ed9a5; border-color: #39784b; }
+.device-badge.stale { color: #e7bd72; border-color: #80652f; }
+.device-badge.never { color: var(--muted); }
+.device-detail { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.table-scroll { overflow-x: auto; }
+.device-log { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; }
+.device-log th, .device-log td { padding: 11px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.device-log th { color: var(--muted); font-size: 10px; letter-spacing: .1em; }
+@media (max-width: 640px) { .device-grid { grid-template-columns: 1fr; } }

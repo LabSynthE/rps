@@ -2,8 +2,42 @@
   const socket = io();
   const $ = id => document.getElementById(id);
 
+  function renderDeviceMonitor(monitor) {
+    if (!monitor) return;
+    for (const [station, label] of [["A", "a"], ["B", "b"]]) {
+      const device = monitor.stations?.[station];
+      if (!device) continue;
+      const badge = $("device-" + label + "-status");
+      const detail = $("device-" + label + "-last");
+      badge.className = "device-badge " + device.status;
+      const ip = device.info?.ip || device.info?.remoteIp;
+      const extra = ip ? ` · IP ${ip}` : "";
+      if (device.status === "recent") {
+        badge.textContent = "RECENTLY SEEN";
+        detail.textContent = `Last successful input: ${new Date(device.lastSeen).toLocaleString()} · ${Math.max(0, Math.floor(device.ageMs / 1000))}s ago${extra}`;
+      } else if (device.status === "stale") {
+        badge.textContent = "NO RECENT SIGNAL";
+        detail.textContent = `Last successful input: ${new Date(device.lastSeen).toLocaleString()}${extra}`;
+      } else {
+        badge.textContent = "NEVER CONNECTED";
+        detail.textContent = "No Arduino data received yet.";
+      }
+    }
+
+    const rows = monitor.recentInputs || [];
+    $("arduino-log").innerHTML = rows.length ? rows.map(item => `
+      <tr>
+        <td>${new Date(item.receivedAt).toLocaleTimeString()}</td>
+        <td>${item.station}</td>
+        <td>${item.location === "northern" ? "Northern" : "Eastern"}</td>
+        <td>${item.choice.toUpperCase()}</td>
+        <td>${item.matched ? "MATCHED" : "QUEUED"}</td>
+      </tr>`).join("") : '<tr><td colspan="5" class="notice">No Arduino inputs received yet.</td></tr>';
+  }
+
   function render(state) {
     if (!state) return;
+    renderDeviceMonitor(state.deviceMonitor);
     const s = state.stats;
     $("session-info").textContent = state.session
       ? `${state.session.sessionId.toUpperCase()} · STARTED ${new Date(state.session.startTime).toLocaleString()}`
@@ -45,5 +79,6 @@
 
   socket.on("state:update", render);
   socket.on("session:new", render);
+  socket.on("device:activity", renderDeviceMonitor);
   fetch("/api/state").then(r => r.json()).then(render).catch(console.error);
 })();

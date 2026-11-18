@@ -51,6 +51,31 @@
       </article>
     </section>
 
+    <section class="panel" style="margin-top:18px" aria-live="polite">
+      <h2>Arduino device monitor</h2>
+      <p class="notice">Status is based on the last successful button event received by this server. The current firmware does not send periodic heartbeats.</p>
+      <div class="device-grid">
+        <div class="device-card">
+          <div class="device-heading"><strong>NORTHERN · STATION A</strong><span id="device-a-status" class="device-badge never">NEVER CONNECTED</span></div>
+          <div class="device-detail" id="device-a-last">No Arduino data received yet.</div>
+        </div>
+        <div class="device-card">
+          <div class="device-heading"><strong>EASTERN · STATION B</strong><span id="device-b-status" class="device-badge never">NEVER CONNECTED</span></div>
+          <div class="device-detail" id="device-b-last">No Arduino data received yet.</div>
+        </div>
+      </div>
+    </section>
+
+    <article class="panel" style="margin-top:18px">
+      <h2>Arduino input log · latest 30 events</h2>
+      <div class="table-scroll">
+        <table class="device-log">
+          <thead><tr><th>Received</th><th>Station</th><th>Location</th><th>Choice</th><th>Processing</th></tr></thead>
+          <tbody id="arduino-log"><tr><td colspan="5" class="notice">No Arduino inputs received yet.</td></tr></tbody>
+        </table>
+      </div>
+    </article>
+
     <article class="panel" style="margin-top:18px">
       <h2>Current session — recent matches</h2>
       <div id="history" class="history"><div class="notice">No matches yet.</div></div>
