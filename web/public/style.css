@@ -24,7 +24,7 @@ a { color: var(--accent); }
   text-transform: uppercase; 
   font-weight: 700; 
 }
-.kicker { color: var(--accent); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+.kicker { color: var(--accent); font-size: .8rem; letter-spacing: .18rem; text-transform: uppercase; font-weight: 700; padding: 1rem 0 0 0; }
 .brand { 
   /* font-size: clamp(28px, 4vw, 56px);  */
   font-weight: 900; letter-spacing: -.05em; line-height: .95; }
