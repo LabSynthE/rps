@@ -32,8 +32,8 @@
   background-repeat: no-repeat;
  }
  .container-wrap {
-  background-image: url("images/contentArea-windowsUI.png");
-  background-size: cover;
+ background-image: url("images/contentArea-windowsUI.png");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 8rem 2rem;
  }
@@ -50,7 +50,7 @@
   letter-spacing: .1em;
   font-size: 5rem;
   color: var(--bassplays);
-  filter: drop-shadow(1rem);
+  filter: drop-shadow(0 0 .5rem rgb(235, 160, 68));
  }
   </style>
 </head>
@@ -58,14 +58,15 @@
 <body data-location="northern">
   <div class="container-fluid mx-auto">
   <main class="player-shell">
-    <div class = "container-wrap col-11">
+    <div class = "container-wrap">
     <div class="kicker">A distributed public game</div>
     <div class="brand bass-glitch">BASS PLAYS</div>
     <div class="subhead">Rock · Paper · Scissors</div>
     <div class="location-title" style="color: var(--UTDorange);">ORANGE DOOR</div>
     <p class="prompt">MAKE YOUR CHOICE</p>
-    <section class="d-grid col-10 mx-auto" aria-label="Choose rock paper or scissors">
-      <button class="choice-button" data-choice="rock"><span class="choice-symbol">✊</span>ROCK</button>
+    <section class="row row-cols-1 g-3 mx-auto">
+      <button class="choice-button" data-choice="rock">
+        <span class="choice-symbol">✊</span>ROCK</button>
       <button class="choice-button" data-choice="paper"><span class="choice-symbol">✋</span>PAPER</button>
       <button class="choice-button" data-choice="scissors"><span class="choice-symbol">✌</span>SCISSORS</button>
     </section>
@@ -74,7 +75,8 @@
       <span>PRESS BUTTON TO PLAY</span>
     </div>
     </div>
-      </main>
+     </main>
+      </div>
       <footer class="footer mt-auto py-3 bg-light text-center">
       <div class="container"> <!--had player-footer class on it before-->
         <!-- <span class="text-body-secondary">BASS PLAYS: ROCK, PAPER, SCISSORS</span> -->

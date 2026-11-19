@@ -34,8 +34,8 @@ padding: 1rem 0 0 0; }
 .player-shell { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5vh 5vw; text-align: center; gap: 24px; }
 .player-shell .brand { margin-top: 8px; }
 .location-title { font-size: clamp(18px, 2vw, 28px); letter-spacing: .16em; font-weight: 700; }
-.prompt { color: #000; font-size: clamp(15px, 1.5vw, 20px); letter-spacing: .12em; margin: 12px 0 6px; }
-.button-grid { display: grid; grid-template-columns: repeat(3, minmax(130px, 220px)); gap: 16px; width: min(900px, 100%); margin-top: 12px; }
+.prompt { color: #000; font-size: clamp(15px, 1.5vw, 20px); letter-spacing: .12em; margin: .8rem 0; }
+.button-grid { display: grid; grid-template-columns: repeat(3, minmax(130px, 220px)); gap: 16px; width: min(700px, 100%); margin-top: .8rem; }
 .choice-button { min-height: 190px; border: 2px solid var(--text); background: var(--panel); color: var(--text); font-size: clamp(20px, 2.6vw, 32px); font-weight: 900; letter-spacing: .05em; transition: .15s ease; }
 .choice-button:hover, .choice-button:focus-visible { background: var(--accent); color: #101010; border-color: var(--accent); transform: translateY(-3px); outline: none; }
 .choice-button:disabled { opacity: .45; cursor: wait; transform: none; }
